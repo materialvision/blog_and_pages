@@ -1,22 +1,23 @@
-<% title "Pages" %>
+<% title "pages" %>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-  </tr>
   <% for page in @pages %>
     <tr>
-      <td><%=h page.title %></td>
-      <td><%= page.content %></td>
-      <td><%= link_to "Show", page %></td>
-			<% if logged_in? %>
-      	<td><%= link_to "Edit", edit_page_path(page) %></td>
-	      <td><%= link_to "Destroy", page, :confirm => 'Are you sure?', :method => :delete %></td>
-			<%end%>
-    </tr>
+      <td><strong><%=h page.title %></strong></td>    
+		</tr>
+    <tr>
+			<td><%= page.content %></td>
+		</tr>
+		<tr>
+			<td><%= link_to "Show", page %>
+			<% if logged_in? %> |
+	      <%= link_to "Edit", edit_page_path(page) %> |
+<%= link_to "Destroy", page, :confirm => 'Are you sure?', :method => :delete %>	
+			<%end%><td>
+		</tr>
+		<tr><td><br></td></tr>
   <% end %>
 </table>
 <% if logged_in? %>
-	<p><%= link_to "New Page", new_page_path %></p>
+	<p><%= link_to "New page", new_page_path %></p>
 <%end%>
