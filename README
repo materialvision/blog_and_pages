@@ -1,0 +1,10 @@
+BLOG AND PAGES
+
+A simple startingpoint for developing a webpage that includes pages and a blog. 
+
+Uses Wysihat-engine for editing and mislavs will_paginate for index
+
+Installation
+1. download source
+2. Run rake db:migrate
+
