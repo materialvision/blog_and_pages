@@ -9,6 +9,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   
+  def tagged
+    @posts=Post.tagged_with(params[:tagg]).paginate(:page => params[:page], :per_page => 8)
+    render :action => 'index'
+  end
+  
   def new
     @post = Post.new
   end

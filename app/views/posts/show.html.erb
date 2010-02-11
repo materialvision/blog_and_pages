@@ -10,9 +10,9 @@
 	</tr>
 	<tr>
 		<td><div id="time_and_author">Tags: 
-		<%@post.tags.each do |t|%>
-		<%=t%>
-		<%end%>
+			<%@post.tags.each do |t|%>
+			<%= link_to t, tagged_path(:tagg=>t.to_s)%>
+			<%end%>
 		</div></td>
 	</tr>
 </table>
