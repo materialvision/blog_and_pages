@@ -6,6 +6,7 @@
 		<%= javascript_include_tag :defaults, 'wysihat_engine_pack' %>
 		<%= stylesheet_link_tag 'facebox', 'wysihat','application' %>
     <%= yield(:head) %>
+		<%= auto_discovery_link_tag(:rss, rss_path) %>
   </head>
   <body>
     <div id="container">    

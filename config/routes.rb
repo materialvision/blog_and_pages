@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   
   map.tagged 'tagged', :controller => 'posts', :action => 'tagged'
+  map.rss 'rss', :controller => 'posts', :action => 'rss'
 
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'

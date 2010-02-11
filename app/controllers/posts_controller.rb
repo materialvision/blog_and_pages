@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show, :tagged, :rss]
+  layout "application", :except => :rss
   
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 8,:order => "created_at DESC")
@@ -12,6 +13,10 @@ class PostsController < ApplicationController
   def tagged
     @posts=Post.tagged_with(params[:tagg]).paginate(:page => params[:page], :per_page => 8)
     render :action => 'index'
+  end
+  
+  def rss
+    @posts = Post.find(:all)
   end
   
   def new
