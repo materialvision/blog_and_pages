@@ -42,6 +42,6 @@ Rails::Initializer.run do |config|
   config.gem 'wysihat-engine', :source => 'http://gemcutter.org'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
-
+  config.gem "acts-as-taggable-on", :source => "http://gemcutter.org"
   
 end

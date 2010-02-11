@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 2,:order => "updated_at DESC")
+    @posts = Post.paginate(:page => params[:page], :per_page => 8,:order => "created_at DESC")
   end
   
   def show

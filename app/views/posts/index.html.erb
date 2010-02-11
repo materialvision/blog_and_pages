@@ -1,20 +1,24 @@
-<% title "Posts" %>
-
 <table>
   <% for post in @posts %>
     <tr>
-      <td><strong><%=h post.title %></strong></td>    
+      <td><div id="post_title"><%= link_to post.title, post %></div></td>    
 		</tr>
     <tr>
-			<td><%= post.content %></td>
+			<td><div id="post_content"><%= post.content %></div></td>
 		</tr>
 		<tr>
+			<td><div id="time_and_author"><%= post.created_at %> by <%= post.author %></div></td>
+		</tr>
+		<% if logged_in? %>
+		<tr>
+			
 			<td><%= link_to "Show", post %>
-			<% if logged_in? %> |
+			 |
 	      <%= link_to "Edit", edit_post_path(post) %> |
 <%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %>	
-			<%end%><td>
+			<td>
 		</tr>
+		<%end%>
 		<tr><td><br></td></tr>
   <% end %>
 </table>

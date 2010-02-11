@@ -1,7 +1,4 @@
-/* @override http://localhost:3000/stylesheets/application.css?1264954191 */
-
 body {
-  background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -21,19 +18,18 @@ a {
 }
 
 #container {
-  width: 75%;
-  margin: 0 auto;
   background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
 }
 
 #loginlink {
-	float:right;
 	top: 0;
 	left: 0;
 	position: relative;
+	text-align: center;
+	font-size: 12px;
+}
+#loginlink a {
+	font-size: 12px;
 }
 
 #flash_notice, #flash_error {
@@ -88,3 +84,25 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+/* @group posts */
+
+#post_title a {
+	color: #242424;
+	text-decoration: none;
+	font-weight: bold;
+}
+#post_title a:hover { color: #000; background-color:#dcffe9; }
+
+#post_content {
+	
+}
+
+#time_and_author {
+	font-size: 11px;
+	color: #95a8ac;
+}
+
+
+
+/* @end */

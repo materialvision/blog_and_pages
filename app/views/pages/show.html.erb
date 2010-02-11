@@ -1,17 +1,10 @@
-<% title "Page" %>
-
-<p>
-  <%=h @page.title %>
-</p>
-<p>
-  <%= @page.content %>
-</p>
-
+<div id="page_content"><%= @page.content %></div>
 
 <p>
 <% if logged_in? %>
   <%= link_to "Edit", edit_page_path(@page) %> |
   <%= link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete %> |
-<%end%>
   <%= link_to "View All", pages_path %>
+<%end%>
+
 </p>

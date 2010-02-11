@@ -2,13 +2,12 @@
 
 <table>
   <% for page in @pages %>
-    <tr>
-      <td><strong><%=h page.title %></strong></td>    
-		</tr>
-    <tr>
-			<td><%= page.content %></td>
-		</tr>
-		<tr>
+  <tr>
+    <td><div id="post_title"><%= link_to page.title, page %></div></td>    
+	</tr>
+	<tr>
+		<td><div id="time_and_author"><%= page.created_at %></div></td>
+	</tr>
 			<td><%= link_to "Show", page %>
 			<% if logged_in? %> |
 	      <%= link_to "Edit", edit_page_path(page) %> |
