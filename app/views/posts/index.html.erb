@@ -9,6 +9,14 @@
 		<tr>
 			<td><div id="time_and_author"><%= post.created_at %> by <%= post.author %></div></td>
 		</tr>
+		<tr>
+			<td><div id="time_and_author">Tags: 
+			<%post.tags.each do |t|%>
+			<%=t%>
+			<%end%>
+			</div></td>
+		</tr>
+		
 		<% if logged_in? %>
 		<tr>
 			
